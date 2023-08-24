@@ -7,7 +7,9 @@
 
 This challenge was about creating two designs that replicate the modal given as the example shown for desktop and mobile versions by using HTML and CSS
 
-With the help of *Media Queries* and using the property *backg*ound-image* property, this can be done on a single CSS file 
+The creation of helper divs and classes where part of the challenges and were not given
+
+With the help of *Media Queries* and using the property *backg*ound-image* property, this can be done on a single CSS file
 
 **This is pure HTML and CSS**
 
