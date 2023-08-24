@@ -1,0 +1,159 @@
+:root{
+    --darkCyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --veryDarkBlue: hsl(212, 21%, 14%);
+    --darkGrayishBlue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    --mainFont:'Fraunces', serif;
+    --textFont: 'Montserrat', sans-serif;
+}
+
+html{
+    font-size: 62.5%; /* standarizin rem units */
+    /* box sizing to standarised the sizes */
+    box-sizing: border-box; /* hack box model */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit; /* hack bbox model */
+}
+body{
+    font-size: 1.6rem; /* standarizin rem units */
+    background-color: var(--cream);
+}
+
+.modal-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal{
+    display: flex;
+    background-color: var(--white);
+    width: 58rem;
+    height: 43rem;
+    border-radius: 1rem;
+}
+
+
+.modal .img{
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    background-image: url(../images/image-product-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.content{
+    flex: 1 0 50%;
+    padding: 2rem 3rem;
+}
+
+.content h3{
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    color: var(--darkGrayishBlue);
+    font-family: var(--textFont);
+    font-size: 1.1rem;
+    font-weight: normal;
+    padding-bottom: 1.5rem;
+}
+
+.content .title, .price-on{
+    font-family: var(--mainFont);
+    font-size: 3.1rem;
+    line-height: 100%;
+    margin-top: 0;
+}
+
+.container-price{
+    display: flex;
+    gap: 2rem;
+    align-items: start;
+}
+
+.content .description{  
+    line-height: 1.7;
+    font-size: 1.4rem;
+    margin-top: 0;
+}
+
+.price-on{
+    color: var(--darkCyan);
+    padding-right: 1rem;
+}
+
+.price-off{
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    padding-top: .5rem;
+    margin-top: 0;
+}
+
+.content .description, .price-off{
+    font-family: var(--textFont);
+    color: var(--darkGrayishBlue);
+}
+
+button{
+    border: none;
+    border-radius: .5rem;
+    padding: 1.3rem 0 ;
+    width: 100%;
+    cursor: pointer;
+    background-color: var(--darkCyan);
+    color: var(--white);
+    font-family: var(--textFont);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (max-width: 595px) {
+    .modal{
+        height: 70rem;
+        width: 35rem;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .modal .img{
+        background-image: url(../images/image-product-mobile.jpg);
+        border-top-right-radius: 1rem;
+        border-bottom-left-radius: 0;
+
+    }
+
+}
+
+@media (max-width: 350px) {
+
+    .modal-container{
+        margin-top: 2rem;
+    }
+    .modal{
+        height: 60rem;
+        width: 25rem;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .modal .img{
+        background-image: url(../images/image-product-mobile.jpg);
+        border-top-right-radius: 1rem;
+        border-bottom-left-radius: 0;
+        flex: 0 1 50%;
+        height: 100%;
+    }
+
+
+}
